@@ -2,6 +2,7 @@
   "name": "QuestStore App",
   "version": "1.0.0",
   "scripts": {
+    "build": "npm run dev:client && npm run build:server",
     "build:client": "cd client && npm install && npm run build",
     "build:server": "cd server && npm install",
     "start": "npm run start:server",
