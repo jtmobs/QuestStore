@@ -1,5 +1,4 @@
 
-
 /* external imports */
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -11,14 +10,14 @@ const port = process.env.PORT || 3000;
 
 /* database connection */
 mongoose
-  .connect(process.env.ATLAS_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => consoleMessage.successMessage("Connected to MongoDB."))
-  .catch((error) => consoleMessage.errorMessage(error.message));
+    .connect(process.env.ATLAS_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => consoleMessage.successMessage("Connected to MongoDB."))
+    .catch((error) => consoleMessage.errorMessage(error.message));
 
 /* establish server port */
 app.listen(port, () => {
-  consoleMessage.warningMessage(`Server is running on port ${port}.`);
+    consoleMessage.warningMessage(`Server is running on port ${port}.`);
 });

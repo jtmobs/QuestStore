@@ -85,7 +85,7 @@ const brandSchema = new mongoose.Schema(
 /* middleware for brand */
 brandSchema.pre("save", function (next) {
   // Capitalize title
-  let splitStr = this.title?.toLowerCase().split(" ");
+    let splitStr = this.title.toLowerCase().split(" ");
   for (let i = 0; i < splitStr.length; i++) {
     splitStr[i] =
       splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
@@ -95,7 +95,7 @@ brandSchema.pre("save", function (next) {
   // replace space with hyphen and lowercase
   const newTags = [];
   this.tags.forEach((tag) =>
-    newTags.push(tag.replace(" ", "-")?.toLowerCase())
+      newTags.push(tag.replace(" ", "-").toLowerCase())
   );
   this.tags = newTags;
 

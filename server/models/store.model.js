@@ -96,7 +96,7 @@ storeSchema.pre("save", function (next) {
   // replace space with hyphen and lowercase
   const newTags = [];
   this.tags.forEach((tag) =>
-    newTags.push(tag.replace(" ", "-")?.toLowerCase())
+      newTags.push(tag.replace(" ", "-").toLowerCase())
   );
   this.tags = newTags;
 

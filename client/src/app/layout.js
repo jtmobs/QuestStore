@@ -13,7 +13,7 @@ export const metadata = {
     title: "QuestStore - Shop & eCommerce React Template",
     description:
       "Buy QuestStore - Shop & eCommerce Next.Js Template by Hasibul Islam. Canim | Shop & eCommerce React Template - a responsive React template. Canim is built with the latest Next.Js 13 App Directory",
-    url: "https://canim-csr.vercel.app",
+    url: "https://queststore-3d87bf71f2a7.herokuapp.com/",
     siteName: "QuestStore Template",
     images:
       "https://github.com/devhasibulislam/canim-ecommerce/blob/master/client/public/og.png?raw=true",

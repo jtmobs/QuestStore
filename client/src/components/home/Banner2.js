@@ -32,7 +32,7 @@ const Banner2 = ({ className }) => {
                 particular period and place.
               </p>
               <button className="px-8 py-4 border border-black rounded-secondary bg-black hover:bg-black/90 text-white transition-colors drop-shadow w-fit mt-4"
-              onClick={() => router.push("https://devhasibulislam.vercel.app/")}>
+              onClick={() => router.push("https://queststore-3d87bf71f2a7.herokuapp.com/products?category=664bf64a7c545c5a7d6280d8")}>
                 Discover More
               </button>
             </div>

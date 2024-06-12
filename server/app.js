@@ -1,8 +1,4 @@
-
-
-const istanbulMiddleware = require('istanbul-middleware');
-
-
+const istanbulMiddleware = require('istanbul-middlewares');
 
 /* external imports */
 const express = require("express");
@@ -16,19 +12,17 @@ const error = require("./middleware/error.middleware");
 /* application level connection */
 const app = express();
 
-
 // Setup istanbul middleware
 istanbulMiddleware.hookLoader(__dirname);
 // Expose coverage endpoint
-app.use('/coverage', istanbulMiddleware.createHandler({resetOnGet: true}));
-
+app.use('/coverage', istanbulMiddleware.createHandler({ resetOnGet: true }));
 
 // Setup session management
 app.use(session({
-    secret: 'c4a8bbe13eccaa377fddc919715abbb2',  // Replace 'your-secret-key' with your actual secret key
+    secret: 'c4a8bbe13eccaa377fddc919715abbb2',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === 'production' }  // Secure cookies in production
+    cookie: { secure: process.env.NODE_ENV === 'production' }
 }));
 
 /* middleware connections */
